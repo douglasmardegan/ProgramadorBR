@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Chunkfive Ex;
+    src: url(./fonts/Chunkfive_Ex.ttf);
+}
+
+body {
+    background-color: black;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+#externBox {
+    max-width: 100%; height: 100vh;
+    background-image: url(./images/barbecue_image.jpg);
+    background-size: cover;
+    position: relative;
+    overflow: auto;
+}
+
+#internBox {
+    max-width: 650px;
+    border-radius: 2%;
+    padding: 1em;
+    margin-top: 5%;
+    margin-left: auto; margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+}
+
+.title {
+    font-family: Chunkfive Ex;
+    font-weight: 750;
+    font-size: 3.25em;
+    letter-spacing: 5px;
+    text-align: center;
+}
+
+#subtitle1 {
+    padding-top: 0.5em; padding-bottom: 0.5em;
+    padding-left: 1em; padding-right: 1em;
+    font-family: 'PT Sans', sans-serif;
+    font-size: large;
+    line-height: 20px;
+    text-align: justify;
+}
+
+#subtitle2 {
+    padding-top: 0.5em; padding-bottom: 1em;
+    padding-left: 1em; padding-right: 1em;
+    font-family:'PT Sans', sans-serif;
+    font-size: large;
+    line-height: 20px;
+    text-align: justify;
+}
+
+#inputBox {
+    text-align: center;
+}
+
+#inputMen {
+    font-family:'PT Sans', sans-serif;
+    font-size: large;
+}
+
+#inputWomen {
+    font-family:'PT Sans', sans-serif;
+    font-size: large;
+}
+
+#inputKids {
+    font-family:'PT Sans', sans-serif;
+    font-size: large;
+}
+
+input {
+    width: 50%;
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    margin-top: 0.5em; margin-bottom: 0.5em;
+    font-size: large;
+    box-sizing: border-box;
+    background-color: #C9C9C9;
+}
+
+button {
+    width: 50%;
+    border: none;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    margin-top: 0.5em; margin-bottom: 0.5em;
+    font-size: large;
+    font-family:'PT Sans', sans-serif;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #FEA60E, #F27405, #BF3604);
+    font-weight: bolder;
+}
+
+#result {
+    width: 80%;
+    margin-top: 1em; margin-bottom: 1em;
+    margin-left: auto; margin-right: auto;
+    font-family: 'PT Sans', sans-serif;
+    font-size: larger;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+}
