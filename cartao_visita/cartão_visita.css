@@ -1,0 +1,55 @@
+#alinhamento_centro {
+    padding-top: 1.5em;
+    padding-left: 25em;
+}
+
+.cx {
+    background-image: linear-gradient(to left, #E06B0F, #F74B05, #ED2605);
+    width: 400px;
+    height: 400px;
+    border-radius: 25px;
+    padding-top: 0.1em;
+    padding-bottom: 0.05em;
+    box-shadow: 2px 2px gray, 1em 0 1em gray;
+}
+
+.nome {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.8em;
+    text-align: center;
+    text-shadow: 2px 3px #E6F3FF;
+    line-height: 1.2em;
+    padding-top: 1%;
+    padding-bottom: 2%;
+
+}
+
+.icones {
+    width: 40px;
+    height: 55px;
+    padding-bottom: 1.5em;
+    padding-left: 4.0em;
+    display: flex;
+}
+
+.formatacao_redes_sociais {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.1em;
+    font-weight: bolder;
+    padding: 1.1em;
+    padding-left: 1.5em;
+}
+
+a:link, a:visited {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 1em;
+}
+
+a:hover {
+    background-image: linear-gradient(to left, #E8E8DB, #B0BAC3, #858377);
+    box-shadow: 2px 1.5px #E6F3FF, 0.1em 0 0.5em #B0BAC3;
+}
+
