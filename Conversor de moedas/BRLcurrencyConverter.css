@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#container {
+    max-width: 50em; max-height: 60em;
+    margin-left: auto; margin-right: auto;
+    background-image: linear-gradient(to right, #CBAF58, #E7D057, #EED46B, #CEA524, #C39D2E);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main_title {
+    padding: 0.35em;
+    background-image: linear-gradient(-45deg, #103815, #37BD46, #21712A, #247D2F, #195720);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: 900;
+    text-align: center;
+    justify-self: center;
+}
+
+label {
+    width: 25em;
+    margin-left: auto; margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 0.25em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#input_value {
+    width: 25em; height: 2em;
+    border: 0;
+    background-color: white;
+    margin-left: auto; margin-right: auto;
+    padding-left: 0.75em;
+    border-radius: 0.30em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+#note {
+    width: 25em; height: 1em;
+    border: 0;
+    background-color: transparent;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 0.75em;
+    padding-top: 0.5em; padding-bottom: 0.5em;
+    padding-left: 0.75em;
+    border-radius: 0.30em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+#conversionUSD, #conversionEUR, #conversionGBP, #conversionJPY, #conversionAUD, #conversionCHF, #conversionCAD, #conversionCNY, #conversionARS, #conversionTRY {
+    width: 25em; height: 1em;
+    border: 0;
+    margin-left: auto; margin-right: auto;
+    padding-top: 0.5em; padding-bottom: 0.5em;
+    padding-left: 0.75em;
+    border-radius: 0.30em;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+}
+
+#conversionTRY {
+    margin-bottom: 1.5em;
+}
+
+#button {
+    width: 15em; height: 2em;
+    border: 0;
+    background-image: linear-gradient(-45deg, #808080, #A0A0A0, #C0C0C0, #E0E0E0, #FFFFFF);
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 0.5em;
+    border-radius: 0.30em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#button:hover {
+    color: white;
+    background-image: linear-gradient(-45deg, #053773, #064273, #0C5374, #1DA2D8, #26CDF3);
+    transition: 1.25s;
+}
