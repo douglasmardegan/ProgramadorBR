@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./BRLcurrencyConverter.css" />
-    <title>Document</title>
+    <title>Conversor de valores monetários</title>
 </head>
 
 <body>
     <div id="container">
-        <h1 id="main_title">CONVERSOR DE MOEDAS</h1>
+        <header>
+            <picture>
+                <img class="moneyFlatImage" src="./images/moneyFlatImage.png">
+            </picture>
+            <h1 class="mainTitle">Conversor de valores monetários</h1>
+        </header>
+
         <label for="name">Valor em BRL (REAL BRASILEIRO) a ser convertido:</label>
-        <input id="input_value" type="text" placeholder="Ex. R$ 50.00">
+        <input id="input_value" type="text" placeholder="Ex. `${}` 50.00">
         <p id="note">Nota: insira somente números</p>
         <input id="button" type="button" value="Converter" onclick="converter()">
 
@@ -40,6 +46,7 @@
 
         <script type="text/javascript" src="./BRLcurrencyConverter.js"></script>
     </div>
+    <footer></footer>
 </body>
 
 </html>

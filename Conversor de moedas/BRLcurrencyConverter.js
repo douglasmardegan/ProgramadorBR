@@ -1,4 +1,4 @@
-let url =
+const url =
   "https://economia.awesomeapi.com.br/last/BRL-USD,BRL-EUR,BRL-GBP,BRL-JPY,BRL-AUD,BRL-CHF,BRL-CAD,BRL-CNY,BRL-ARS,BRL-TRY";
 
 function converter() {
