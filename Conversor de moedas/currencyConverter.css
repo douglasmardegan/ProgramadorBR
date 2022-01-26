@@ -46,8 +46,8 @@ img.moneyFlatImage {
 h1 {
   width: 40vw;
   height: auto;
-  padding: 0.35em;
   margin: auto;
+  padding: 0.35em;
   color: white;
   font-family: Ariemal, Helvetica, sans-serif;
   font-size: 1.85em;
@@ -69,8 +69,8 @@ label {
 }
 
 input {
-  width: 5.5em;
-  height: 3em;
+  width: 6.5em;
+  height: 3.5em;
   border: 0;
   background-color: white;
   margin-left: auto;
@@ -121,23 +121,30 @@ select {
 }
 
 #currencyConversionResult {
-  min-width: 5.5em;
+  min-width: 6.5em;
   height: 3.5em;
   border: 0;
+  border-radius: 0.25em;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 1.25em;
-  padding-left: 0.75em;
-  border-radius: 0.25em;
-  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button.convertButton {
   width: 7.5em;
   height: 5em;
   border: none;
+  border-radius: 0.5em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  margin-left: auto;
+  margin-right: auto;
   color: black;
   background-image: linear-gradient(
     -45deg,
@@ -148,11 +155,6 @@ button.convertButton {
     #808080
   );
   box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 0.5em;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1em;
   font-weight: bold;
