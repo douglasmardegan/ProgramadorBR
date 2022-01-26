@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 100vw;
+  max-height: 80vh;
+  background-color: black;
+  box-sizing: border-box;
+}
+
+div.container {
+  max-width: 60vw;
+  height: 85vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+    to right,
+    #cbaf58,
+    #e7d057,
+    #eed46b,
+    #cea524,
+    #c39d2e
+  );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+header {
+  min-width: 60vw;
+  max-height: 25vh;
+  margin: 0 auto;
+  background-image: linear-gradient(-45deg, #103815, #21712a, #247d2f, #195720);
+  display: flex;
+  text-align: center;
+}
+
+img.moneyFlatImage {
+  max-width: 5.5em;
+  margin: 1em 0 1em 1em;
+  display: block;
+}
+
+h1 {
+  width: 40vw;
+  height: auto;
+  padding: 0.35em;
+  margin: auto;
+  color: white;
+  font-family: Ariemal, Helvetica, sans-serif;
+  font-size: 1.85em;
+  font-weight: 900;
+}
+
+label {
+  width: 25em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 5.5em;
+  height: 3em;
+  border: 0;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75em;
+  border-radius: 0.25em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+select {
+  max-width: 25em;
+  height: 3.5em;
+  border: 0;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.75em;
+  border-radius: 0.25em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+#note {
+  min-width: 10em;
+  height: 3.5em;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#initialCurrency, #finalCurrency {
+  min-width: 3em;
+  height: 1.5em;
+  border: 0;
+  border-radius: 0.25em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;         
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#currencyConversionResult {
+  min-width: 5.5em;
+  height: 3.5em;
+  border: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25em;
+  padding-left: 0.75em;
+  border-radius: 0.25em;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+}
+
+button.convertButton {
+  width: 7.5em;
+  height: 5em;
+  border: none;
+  color: black;
+  background-image: linear-gradient(
+    -45deg,
+    #808080,
+    #a0a0a0,
+    #c0c0c0,
+    #a0a0a0,
+    #808080
+  );
+  box-shadow: 7px 6px 28px 1px rgba(0, 0, 0, 0.24);
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button.convertButton:hover {
+  color: white;
+  background-image: linear-gradient(-45deg, #08090d, #1a1e26, #343a40, #6e7371);
+  transition: 1.50s;
+}
+
+button.convertButton:active {
+  transform: translateY(0.25em);
+  transition: 0.25s;
+}
+
+footer {
+  max-width: 60vw;
+  height: 8.5vh;;
+  padding: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  background-image: linear-gradient(-45deg, #103815, #21712a, #247d2f, #195720);
+  text-align: center;
+}
+
+@media screen and (max-width: 1308px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
