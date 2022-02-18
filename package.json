@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.2"
+  },
+  "name": "bulletin_board",
+  "description": "Repositório criado de maneira a praticar não somente Javascript emnpregado no servidor por meio do Node.JS, mas também fixar o conhecimento adquerido em modulos anteriores referentes ao frontend.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/douglasmardegan/ProgramadorBR-course.git"
+  },
+  "author": "Douglas Mardegan Colodete",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/douglasmardegan/ProgramadorBR-course/issues"
+  },
+  "homepage": "https://github.com/douglasmardegan/ProgramadorBR-course#readme"
+}
