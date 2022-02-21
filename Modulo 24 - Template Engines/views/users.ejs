@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/styles/users.css" rel="stylesheet" type="text/css">
+    <title>Class about Template Engines</title>
+</head>
+
+<body>
+    <header>
+        <h1>Implementation and use of Template Engines to create dynamic HTML pages</h1>
+    </header>
+
+    <%- include('./partials/navbar.ejs') %>
+    
+    <div class="all-users-container">
+        <h2>User list</h2>
+
+        <% for (let user of users) {%>
+        <div class="user-container">
+            <p><span>Name:</span> <%=user.name%></p>
+            <p><span>Nationality:</span> <%=user.nationality%></p>
+            <p><span>Phone:</span> <%=user.phone%></p>
+            <p><span>E-mail:</span> <%=user.email%></p>
+        </div>
+        <% } %>
+    </div>
+
+    <%- include('partials/footer.ejs') %>
+</body>
+
+</html>
