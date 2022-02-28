@@ -21,7 +21,7 @@ function handleClick(event) {
       confettiEffect.classList.add("active");
 
       popupWindow.innerHTML = `
-      <div>The winner was the "PLAYER ${playerTime == 0 ? 2 : 1}"</div>
+      <div class="playerWinner">The winner was the "PLAYER ${playerTime == 0 ? 2 : 1}"</div>
       <button class="closeBtn" onclick="closePopup()">X</button>
       <button class="resetBtn" onclick="resetGame()">Reset</button>
       `;
