@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/tic-tac-toe-icon" href="./images/tic-tac-toe-favicon.png">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Tic Tac Toe game</title>
+</head>
+
+<body>
+    <div class="typewriter">
+        <h1>Tic Tac Toe game</h1>
+    </div>
+    <div class="player-type">
+        <h2 class="player-0">Player 1: CIRCLE</h2>
+        <h2 class="player-1">Player 2: CROSS</h2>
+    </div>
+    <div class="stage">
+        <div>
+            <div class="square" id="0"></div>
+            <div class="square" id="1"></div>
+            <div class="square" id="2"></div>
+        </div>
+        <div>
+            <div class="square" id="3"></div>
+            <div class="square" id="4"></div>
+            <div class="square" id="5"></div>
+        </div>
+        <div>
+            <div class="square" id="6"></div>
+            <div class="square" id="7"></div>
+            <div class="square" id="8"></div>
+        </div>
+    </div>
+
+    <div class="popupWindow"></div>
+
+    <canvas id="my-canvas" clock="15"></canvas>
+
+    <script src="./scripts/model.js"></script>
+    <script src="./scripts/controller.js"></script>
+    <script src="node_modules/confetti-js/dist/index.min.js"></script>
+</body>
+
+</html>

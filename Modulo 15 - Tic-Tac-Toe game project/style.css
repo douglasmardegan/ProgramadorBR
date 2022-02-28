@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Press Start 2P");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Press Start 2P";
+  background: linear-gradient(#0e2f73, #1747a6, #117dbf, #05dbf2);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.typewriter h1 {
+  margin: 0 auto;
+  font-size: 2em;
+  color: white;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.17em solid pink;
+  animation: typing 3.5s steps(30, end), blinking-cursor 1s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinking-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: pink;
+  }
+}
+
+h2 {
+  margin: 0.5em;
+}
+
+.player-0 {
+  color: #00a540;
+}
+
+.player-1 {
+  color: #f20d00;
+}
+
+.stage {
+  max-width: 35em;
+  max-height: 35em;
+  padding: 1em;
+
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.square {
+  width: 8.5em;
+  height: 8.5em;
+  margin: 1em;
+
+  background: rgba(245, 238, 238, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 7.5em;
+  height: 7.5em;
+}
+
+.cross {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle::after {
+  content: url(./images/empty-circle-image.svg);
+}
+
+.cross::after {
+  content: url(./images/cross-image.svg);
+}
+
+.popupWindow {
+  width: 35em;
+  height: 15em;
+  padding: 40px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+
+  visibility: hidden;
+
+  background: rgba(245, 238, 238, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.popupWindow.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  visibility: visible;
+}
+
+.closeBtn {
+  width: 2.5em;
+  height: 2em;
+  background: rgba(255, 0, 0, 0.85);
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  font-weight: bolder;
+}
+
+.resetBtn {
+  width: 9.5em;
+  height: 3em;
+  background: rgba(255, 0, 0, 0.85);
+  cursor: pointer;
+
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.50);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-family: "Press Start 2P";
+  font-size: 1em;
+  font-weight: 550;
+}
+
+#my-canvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  margin: 0;
+  z-index: 10000;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+#my-canvas.active {
+  visibility: visible;
+}
