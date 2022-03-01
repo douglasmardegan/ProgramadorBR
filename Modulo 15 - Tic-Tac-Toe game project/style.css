@@ -143,7 +143,8 @@ h2 {
   visibility: visible;
 }
 
-.playerWinner {
+.playerWinner,
+.tieDeclaration {
   padding: 1em;
   line-height: 1.5em;
   text-align: center;
@@ -174,7 +175,7 @@ h2 {
   background: rgba(255, 0, 0, 0.85);
   cursor: pointer;
 
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.50);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 

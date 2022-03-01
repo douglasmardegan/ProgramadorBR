@@ -21,7 +21,9 @@ function handleClick(event) {
       confettiEffect.classList.add("active");
 
       popupWindow.innerHTML = `
-      <div class="playerWinner">The winner was the "PLAYER ${playerTime == 0 ? 2 : 1}"</div>
+      <div class="playerWinner">The winner was the "PLAYER ${
+        playerTime == 0 ? 2 : 1
+      }"</div>
       <button class="closeBtn" onclick="closePopup()">X</button>
       <button class="resetBtn" onclick="resetGame()">Reset</button>
       `;
@@ -35,12 +37,40 @@ function handleClick(event) {
     }, 250);
   }
   updateSquare(position);
+
+  checkTie();
 }
 
 function updateSquare(position) {
   let square = document.getElementById(position.toString());
   let symbol = board[position];
   square.innerHTML = `<div class="${symbol}"</div>`;
+}
+
+function checkTie() {
+  tie = 0;
+  for (let i = 0; i < board.length; i++) {
+    tie += board[i] !== "" ? 1 : 0;
+  }
+
+  if (tie == 9 && gameOver == false) {
+    setTimeout(() => {
+      const popupWindow = document.querySelector(".popupWindow");
+      const closePopupBtn = document.querySelector(".closeBtn");
+      const resetGameBtn = document.querySelector(".resetBtn");
+
+      popupWindow.classList.add("active");
+
+      popupWindow.innerHTML = `
+      <div class="tieDeclaration">There was a tie between the players</div>
+      <button class="closeBtn" onclick="closePopup()">X</button>
+      <button class="resetBtn" onclick="resetGame()">Reset</button>
+      `;
+
+      resetGameBtn.addEventListener("click", resetGame());
+      closePopupBtn.addEventListener("click", closePopup());
+    }, 250);
+  }
 }
 
 function closePopup() {
@@ -50,7 +80,6 @@ function closePopup() {
 
 function resetGame() {
   document.querySelector(".popupWindow").innerHTML = "";
-  closePopup();
 
   gameOver = false;
   board = ["", "", "", "", "", "", "", "", ""];
@@ -60,4 +89,6 @@ function resetGame() {
   for (let square of squares) {
     square.innerHTML = "";
   }
+
+  closePopup();
 }
