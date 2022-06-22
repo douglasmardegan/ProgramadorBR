@@ -1,0 +1,82 @@
+// ------------------------------------------------------------------------------------------------- //
+FRONTEND Notes from the first classes about the socket.io
+// ------------------------------------------------------------------------------------------------- //
+
+// EXEMPLE 01 (FRONTEND) - Receiving message sent from backend to frontend
+
+socket.on("User connection", (message) => {
+    let user_connection = document.querySelector(".user-connection")
+
+    setTimeout(() => {
+        user_connection.innerHTML = `<p id="message_user_connected">A user has connected</p>`
+    }, 1500);
+
+    setTimeout(() => {
+        user_connection.innerHTML = ""
+    }, 5000);
+
+    // EXEMPLE 02 (FRONTEND) - Sending a message from the frontend to the backend
+    socket.emit("Connection user response", {
+        msg: "The message indicating that a user has connected was displayed correctly on the frontend"
+    })
+});
+
+
+socket.on("User disconnection", (message) => {
+    let user_disconnection = document.querySelector(".user-disconnection")
+    
+    setTimeout(() => {
+    user_disconnection.innerHTML = `<p id="message_user_disconnected">A user has disconnected</p>`
+    }, 1500);
+
+    setTimeout(() => {
+        user_disconnection.innerHTML = ""
+    }, 5000);
+});
+
+// ------------------------------------------------------------------------------------------------- //
+// BACKEND Notes from the first classes about the socket.io
+// The 'on' function is similar to the 'listener' function
+// ------------------------------------------------------------------------------------------------- //
+
+// EXEMPLE 01 (BACKEND) - Sending a message from the backend to the frontend
+
+io.on("connection", (socket) => {
+  console.log("A user has connected");
+
+  socket.emit("User connection");
+
+  socket.on("Connection user response", (data) => {
+    console.log(data.msg);
+  });
+}); 
+
+io.on("disconnection", (socket) => {
+  console.log("A user has disconnected");
+
+  socket.emit("User disconnected from chat")
+}); 
+
+// ------------------------------------------------------------------------------------------------- //
+BROADCAST - Used to send messages to more than one socket/browser/"user"
+// ------------------------------------------------------------------------------------------------- //
+
+-- > To emit/send a message to the other sockets, INCLUDING the socket that sent the message, use "io.emit" in the backend
+
+io.on("connection", (socket) => {
+  console.log("A user has connected");
+
+  // Sending message from backend to frontend to the other sockets
+  io.emit("user_room_message", {msg: "A user has joined the room"})
+});
+
+--> To emit/send a message to the other sockets, EXCEPT for the socket that sent the message, use "io.broadcast.emit" in the backend
+
+io.on("connection", (socket) => {
+  console.log("A user has connected");
+
+  // Sending message from backend to frontend to the other sockets
+  io.broadcast.emit("user_room_message", {msg: "A user has joined the room"})
+});
+
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="./images/chat-favicon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style_chat.css">
+
+    <title>Chat room</title>
+</head>
+
+<body>
+    <header>
+        <img src="./images/chat-icon.png" alt="Chat icon">
+        <h1>Chat room</h1>
+        <button id="leave-room-btn" type="button">Leave room</button>
+    </header>
+    <main>
+        <div class="display-messages-container">
+            <div class="user-connection"></div>
+            <div class="user-disconnection"></div>
+            <div class="display-messages"></div>
+        </div>
+        <form name="message_form_name" id="message_form" type="submit">
+            <input name="msg" id="message" type="text" autocomplete="off">
+            <button id="submit-message-btn" type="submit">Send</button>
+        </form>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./scripts/script_chats.js"></script>
+</body>
+
+</html>

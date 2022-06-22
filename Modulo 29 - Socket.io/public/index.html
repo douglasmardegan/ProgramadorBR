@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./images/chat-favicon.png" rel="icon" type="image/x-icon">
+    <link href="./styles/style_login.css" rel="stylesheet" type="text/css">
+    
+    <title>Login page</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/chat-icon.png" alt="Chat icon">
+            <h1>User login</h1>
+        </header>
+        <form name="user_form_name" id="user_form">
+            <label for="username">Username</label>
+            <input name="username" id="username" type="text" required>
+
+            <label for="chat_room">Room</label>
+            <select name="chat_room" id="chat_room" required>
+                <option value="chat">Chat</option>
+                <option value="study">Study</option>
+                <option value="fun">Fun</option>
+            </select>
+            <button id="join-room-btn" type="button">Join room</button>
+        </form>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./scripts/script_login.js"></script>
+</body>
+
+</html>
